@@ -1,0 +1,23 @@
+public class codefile{
+    static int solve(List<List<Integer>>  input){
+        int count = 0;
+        int size = 0;
+        int sq_len = 0;
+        for (List<Integer> rec : input){
+               int len = rec.get(0); 
+               int wid = rec.get(1);
+
+               if (len>wid) 
+                    sq_len = wid;
+               else 
+                    sq_len = len;
+               if (sq_len> size){
+                    size = sq_len;
+                    count = 1;
+               }
+               else if (sq_len == size)
+                    count++;
+        }
+        return count;
+    }
+}
