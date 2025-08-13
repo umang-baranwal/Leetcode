@@ -1,0 +1,21 @@
+public class codefile{
+    static int solve(String s){
+            int count =0;
+            int n = s.length();
+            for (int i=0; i < n; i++){
+                  Set<Character> vowelSet = new HashSet<>();
+                  for (int j =i; j<n; j++){
+                        char c = s.charAt(j);
+                        if(!isVowel(c)) break;
+
+                        vowelSet.add(c);
+                        if (vowelSet.size() == 5)
+                              count++;
+                  }
+            }
+            return count;
+    }
+    private static boolean isVowel(char c){
+      return ( c== 'a' || c== 'e' || c== 'i' || c== 'o' || c== 'u' );
+    }
+}
