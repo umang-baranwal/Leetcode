@@ -1,0 +1,17 @@
+A substring is a contiguous (non-empty) sequence of characters within a string.
+
+A vowel substring is a substring that only consists of vowels ('a', 'e', 'i', 'o', and 'u') and has all five vowels present in it.
+
+Given a string word, return the number of vowel substrings in word.
+
+
+
+Input: word = "aeiouu"
+Output: 2
+
+Input: word = "unicornarihan"
+Output: 0
+
+Constraints:
+1 <= word.length <= 100
+word consists of lowercase English letters only.
