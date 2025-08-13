@@ -1,0 +1,21 @@
+class Solution {
+    public boolean areNumbersAscending(String s) {
+        int prev = 0, num = 0;
+        boolean inNum = false;
+        for (char c : s.toCharArray()) {
+            if (Character.isDigit(c)) {
+                num = num * 10 + (c - '0');
+                inNum = true;
+            } else if (inNum) {
+                if (num <= prev)
+                    return false;
+                prev = num;
+                num = 0;
+                inNum = false;
+            }
+        }
+        if (inNum && num <= prev)
+            return false;
+        return true;
+    }
+}
