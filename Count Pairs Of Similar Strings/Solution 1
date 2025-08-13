@@ -1,0 +1,20 @@
+class Solution {
+    public int similarPairs(String[] words) {
+        Map<Integer, Integer> freq = new HashMap<>();
+
+        for (String word : words){
+            int mask =0;
+            for (char c : word.toCharArray()){
+                mask |= 1 << (c - 'a');
+            }
+            freq.put(mask, freq.getOrDefault(mask, 0) +1);
+        }
+
+        int pair =0;
+        for (int count : freq.values())
+            if( count > 0 )
+                pair += count * (count-1)/2;
+
+        return pair;
+    }
+}
