@@ -1,0 +1,11 @@
+Given an array of N integers. Write a program to check whether an arithmetic progression can be formed using all the given elements.
+
+Input 1: arr[] = { 0,12,4,8 }
+Output 1: true
+Explanation 1: Rearrange given array as {0, 4, 8, 12} which forms an arithmetic progression.
+
+Input 2: arr[] = {12, 40, 11, 20}
+Output 2: false
+Constraints:
+2 <= A.length <= 105
+-105 <= A[i] <= 105
