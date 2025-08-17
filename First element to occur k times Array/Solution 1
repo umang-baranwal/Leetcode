@@ -1,0 +1,10 @@
+public class codefile{
+    static int solve(int[]  input,int k){
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : input){
+          map.put(num, map.getOrDefault(num, 0) + 1);
+          if (map.get(num) == k) return num;
+        }
+        return -1;
+    }
+}
