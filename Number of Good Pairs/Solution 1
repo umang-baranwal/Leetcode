@@ -1,0 +1,13 @@
+public class codefile{
+    static int count(int[]  input){
+        Map<Integer, Integer> freq = new HashMap<>();
+        int count =0;
+
+        for (int num : input){
+          if(freq.containsKey(num))
+               count += freq.get(num); 
+          freq.put(num, freq.getOrDefault(num, 0) +1);
+        }
+        return count;
+    }
+}
