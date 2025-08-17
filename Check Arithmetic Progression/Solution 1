@@ -1,0 +1,13 @@
+public class codefile{
+    static boolean check(int[]  input){
+        int n = input.length;
+        if (n<2) return true;
+        Arrays.sort(input);
+
+        int d = input[1] - input[0];
+        for (int i =0; i<n-1; i++){
+          if (input[i+1]- input[i] !=d) return false;
+        }
+        return true;
+    }
+}
